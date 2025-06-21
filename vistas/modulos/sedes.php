@@ -91,8 +91,8 @@
                 <div class="modal-body">
                     <label for="nombreSede">Nombre de la Sede</label>
                     <input type="text" class="form-control" name="nombreSede" required>
-                    <label for="direccionSede" class="mt-2">Direccion</label>
-                    <input type="text" class="form-control" name="direccionSede" required>
+                    <label for="DireccionSede" class="mt-2">Direccion</label>
+                    <input type="text" class="form-control" name="DireccionSede" required>
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -119,28 +119,39 @@
  modal editar sede
  =============== -->
 
- <div class="modal fade" id="modalEditarsede">
-        <div class="modal-dialog">
-          <div class="modal-content">
+ <div class="modal fade" id="modalEditarSede">
+    <div class="modal-dialog">
+        <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">Agregar sede de formación</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+                <h4 class="modal-title">Agregar Sede de formación</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-            
+
             <form action="" method="POST">
-             <div class="modal-body">
-                <label for="descripcionsede">Descripción</label>
-                <input type="text" class="form-control" name="descripcionsede" required>  
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-              <button type="button" class="btn btn-primary">Guardar</button>
-            </div>
-        </form>
-          </div>
-          <!-- /.modal-content -->
-          </div>
-        <!-- /.modal-dialog -->
-      </div>  
+                <div class="modal-body">
+                    <input type="hidden" class="form-control" id="editIdSede" name="editIdSede" required>
+
+                    <label for="nombreSede">Nombre de la Sede</label>
+                    <input type="text" class="form-control" id="editnombreSede" name="editnombreSede" required>
+                    <label for="direccionSede">direccion</label>
+                    <input type="text" class="form-control" id="editDireccionSede" name="editDireccionSede" required>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+                <?php
+                    $editarsede = new ControladorSedes();
+                    $editarsede->ctrEditarsede();
+
+                ?>
+
+
+            </form>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
