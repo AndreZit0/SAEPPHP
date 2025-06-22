@@ -53,13 +53,14 @@
                 $stmt->bindParam(":idsede", $datos["id_sede"], PDO::PARAM_INT);
 
                 if ($stmt->execute()){
+                    $stmt->closeCursor();
+                    $stmt = null;
                     return "ok";
                 }else{
+                    $stmt->closeCursor();
+                    $stmt = null;
                     return "error";
                 }
-
-                $stmt->close();
-                $stmt = null;    
 
         }//fin metodo
 

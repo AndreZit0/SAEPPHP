@@ -16,7 +16,7 @@ $(document).on('click','.btnEditarSede', function(){
         success: function(respuesta){
             console.log(respuesta);
             $("#editnombreSede").val(respuesta["nombre_sede"]);
-            $("#editDirecccionSede").val(respuesta["direccion"]);
+            $("#editDireccionSede").val(respuesta["direccion"]);
             $("#editIdSede").val(respuesta["ID_sede"]);
 
         }//funcion success
@@ -30,7 +30,7 @@ $(document).on('click','.btnEditarSede', function(){
 
 $(document).on('click','.btnActivarSede', function(){
 
-    let idProgramaActivar = $(this).attr("idSedeCambiarEstado");
+    let idSedeActivar = $(this).attr("idSedeCambiarEstado");
     let nuevoEstado = $(this).attr("nuevoEstadosede");
     // console.log("programa capturado:", idProgramaActivar);
     // console.log("programa estado nuevo:", nuevoEstado);

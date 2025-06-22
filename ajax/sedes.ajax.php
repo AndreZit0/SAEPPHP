@@ -14,7 +14,7 @@
             $respuesta = ControladorSedes::ctrMostrarSedes($valor);
             echo json_encode($respuesta);
 
-        }//Fin ajaxTraerprograma
+        }//Fin ajaxTraersede
 
         public function ajaxCambiarEstado(){
             $valorId = $this->id_sede;
@@ -27,7 +27,7 @@
 
         }
 
-    }//fin clase Ajaxprogramas
+    }//fin clase Ajaxsedes
 
     if (isset($_POST["id_sede"])){
         $sede = new AjaxSedes();
